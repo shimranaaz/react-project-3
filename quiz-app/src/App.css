@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: "Arima", serif;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.quiz {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 20px;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Dancing Script", cursive;
+  width: 55%;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "Arima", serif;
+  color: #fff;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px;
+  margin: 5px;
+  background-color: hsl(201.04deg 95.06% 15.88%);
+  font-family: "Arima", serif;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  width: 135px;
+  padding: 12px;
+  font-size: 14px;
+  border: 3px solid hsl(201.04deg 95.06% 15.88%);
+  color: #000;
+}
+
+button.selected {
+  background-color: #6c757d;
+  border: 3px solid hsl(201.04deg 95.06% 15.88%);
+}
+
+.result {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 36px;
+  border-radius: 25px;
+  color: #fff;
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.result h2 {
+  color: #fff;
+}
+
+.result p {
+  font-size: 18px;
+}
+
+.congrats-message {
+  font-weight: bold;
+  color: #07dc07;
+  font-size: 20px;
+}
+
+.answers {
+  margin-top: 20px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.answers p {
+  font-size: 16px;
+  margin: 9px;
+}
+
+.correct {
+  color: #07dc07;
+  font-weight: bold;
+}
+
+.wrong {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+    width: 76%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  button:disabled {
+    font-size: 14px;
+  }
+
+  .quiz,
+  .result {
+    padding: 20px;
+    margin: 10px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    width: 76%;
+  }
+
+  button:disabled {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  .quiz,
+  .result {
+    padding: 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.2rem;
+    width: 60%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .quiz,
+  .result {
+    padding: 30px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 2.5rem;
+    width: 76%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 17px;
+  }
+
+  .quiz,
+  .result {
+    max-width: 95%;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 2.5rem;
+    width: 45%;
+}
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 15px;
+}
+.quiz, .result {
+  max-width: 45%;
+  font-size: 20px;
+}
+}
